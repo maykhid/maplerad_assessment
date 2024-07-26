@@ -5,6 +5,7 @@ class AppColors {
   static const Color background = Color(0xffF7F7F7);
   static const Color lightGrey = Color(0xffF2F4F7);
   static const Color borderGrey = Color(0xffEFEFEF);
+  static const Color pinGrey = Color(0xffDDDDDD);
   static const Color periwinkle = Color(0xff5B79FC);
   static const Color blue = Color(0xff3A5EFB);
   static const Color darkBlue = Color(0xff1E293B);

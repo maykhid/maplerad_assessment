@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:maplerad_assessment/screens/home.dart';
+import 'package:maplerad_assessment/screens/passcode.dart';
 import 'package:maplerad_assessment/shared/ui/app_colors.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MainApp extends StatelessWidget {
               surfaceTintColor: AppColors.background),
           scaffoldBackgroundColor: AppColors.background,
           textTheme: GoogleFonts.nunitoSansTextTheme()),
-      home: const HomeScreen(),
+      home: const PasscodeScreen(),
     );
   }
 }
