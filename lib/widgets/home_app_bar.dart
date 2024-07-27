@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:maplerad_assessment/shared/ui/app_colors.dart';
 import 'package:maplerad_assessment/shared/ui/app_icons.dart';
 import 'package:maplerad_assessment/shared/ui/app_images.dart';
-import 'package:svg_flutter/svg.dart';
 
 class HomeAppBar extends PreferredSize {
   HomeAppBar({super.key})
@@ -11,6 +11,7 @@ class HomeAppBar extends PreferredSize {
             preferredSize: const Size.fromHeight(60.0),
             child: AppBar(
               backgroundColor: AppColors.background,
+              automaticallyImplyLeading: false,
               title: Image.asset(
                 AppImages.user,
                 width: 32,

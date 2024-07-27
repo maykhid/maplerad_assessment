@@ -7,13 +7,13 @@ environment:
   sdk: '>=3.4.4 <4.0.0'
 
 dependencies:
+  dotted_border: ^2.1.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   go_router: ^14.2.1
-  google_fonts: ^6.2.1
   percent_indicator: ^4.2.3
-  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_test:
@@ -33,4 +33,17 @@ flutter:
           - asset: assets/fonts/AvenirLTStd-Regular.otf
           - asset: assets/fonts/AvenirLTStd-Bold.otf
             weight: 800
+      - family: BricolageGrotesque
+        fonts:
+          - asset: assets/fonts/BricolageGrotesque-Bold.ttf
+            weight: 700
+          - asset: assets/fonts/BricolageGrotesque-SemiBold.ttf
+            weight: 600
+      - family: NunitoSans
+        fonts:
+          - asset: assets/fonts/NunitoSans-Bold.ttf
+          - asset: assets/fonts/NunitoSans-Medium.ttf
+          - asset: assets/fonts/NunitoSans-Regular.ttf
+          - asset: assets/fonts/NunitoSans-SemiBold.ttf
+            
 

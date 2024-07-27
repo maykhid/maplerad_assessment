@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:maplerad_assessment/shared/ui/app_colors.dart';
 import 'package:maplerad_assessment/shared/ui/app_icons.dart';
 import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
-import 'package:svg_flutter/svg.dart';
 
 class MapleradKeypad extends StatefulWidget {
   /// [onCompleteAction] A callback function that is invoked when the input is complete
@@ -78,7 +78,11 @@ class _MapleradKeypadState extends State<MapleradKeypad> {
                   return Visibility(
                     visible: showActionButtons,
                     child: _Key(
-                      onPressed: () => _onDoneAction,
+                      onPressed: () {
+                        if (inputs.length == _inputLength) {
+                          _onDoneAction?.call(inputs.join());
+                        }
+                      },
                       child: CircleAvatar(
                         radius: 24,
                         backgroundColor: AppColors.blue,

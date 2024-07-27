@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
-  static final TextStyle headerStyle = GoogleFonts.bricolageGrotesque(
-    textStyle: const TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.w700,
-    ),
+  static const TextStyle headerStyle = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'BricolageGrotesque',
   );
 
   static const TextStyle medium10 = TextStyle(
@@ -57,9 +55,9 @@ class AppTextStyles {
     fontFamily: 'Avenir',
   );
 
-  static final TextStyle semiBold18BricolageGrotesque =
-      GoogleFonts.bricolageGrotesque(
+  static const TextStyle semiBold18BricolageGrotesque = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 18,
+    fontFamily: 'BricolageGrotesque',
   );
 }

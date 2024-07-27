@@ -1,4 +1,6 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:maplerad_assessment/model/account_info.dart';
 import 'package:maplerad_assessment/model/accounts.dart';
@@ -6,7 +8,6 @@ import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
 import 'package:maplerad_assessment/shared/ui/ui.dart';
 import 'package:maplerad_assessment/widgets/home_app_bar.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:svg_flutter/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'My Accounts',
                     style: AppTextStyles.semiBold18BricolageGrotesque,
                   ),
@@ -60,6 +61,8 @@ class HomeScreen extends StatelessWidget {
 
               // user account information
               const _UserAccountInformation(),
+
+              const Gap(20),
             ],
           ),
         ),
@@ -76,7 +79,7 @@ class _UserAccountInformation extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Account Information',
           style: AppTextStyles.semiBold18BricolageGrotesque,
         ),
@@ -115,7 +118,30 @@ class _UserAccountInformation extends StatelessWidget {
                               style: AppTextStyles.bold16,
                             ),
 
+                            const Spacer(),
+
                             // flags
+                            const Stack(
+                              children: [
+                                CircleAvatar(
+                                  // backgroundColor: Colors.amber,
+                                  radius: 12,
+                                  backgroundImage: AssetImage(AppImages.us),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 12),
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    radius: 14,
+                                    child: CircleAvatar(
+                                      // backgroundColor: Colors.red,
+                                      radius: 12,
+                                      backgroundImage: AssetImage(AppImages.ng),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                         const Gap(10),
@@ -153,7 +179,7 @@ class _WirepayAIOptions extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Wirepay AI',
           style: AppTextStyles.semiBold18BricolageGrotesque,
         ),
@@ -270,7 +296,7 @@ class _GetStartedOptions extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Get started',
               style: AppTextStyles.semiBold18BricolageGrotesque,
             ),
@@ -316,7 +342,7 @@ class _GetStartedOptions extends StatelessWidget {
                   ),
                   const Spacer(),
                   AppButton(
-                    width: context.width * 0.365,
+                    width: context.width * 0.37,
                     height: 40,
                     text: 'Verify Identity',
                     // padding: EdgeInsets.zero,
@@ -409,42 +435,87 @@ class _UserAccounts extends StatelessWidget {
         itemCount: accountData.accounts.length,
         itemBuilder: (ctx, index) {
           final account = accountData.accounts[index];
-          return Padding(
-            padding: const EdgeInsets.only(right: 10.0),
-            child: Container(
-              height: 115,
-              width: 194,
-              padding: const EdgeInsets.all(15),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(12),
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+          return Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  height: 115,
+                  width: 194,
+                  padding: const EdgeInsets.all(15),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CircleAvatar(
-                        radius: 16,
-                        backgroundImage: AssetImage(account.flag),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 16,
+                            backgroundImage: AssetImage(account.flag),
+                          ),
+                          const Gap(5),
+                          Text(
+                            account.currency,
+                            style: AppTextStyles.medium14,
+                          ),
+                        ],
                       ),
-                      const Gap(5),
+                      const Spacer(),
                       Text(
-                        account.currency,
-                        style: AppTextStyles.medium14,
-                      ),
+                        account.amount,
+                        style: AppTextStyles.extraBold20Avenir,
+                      )
                     ],
                   ),
-                  const Spacer(),
-                  Text(
-                    account.amount,
-                    style: AppTextStyles.extraBold20Avenir,
-                  )
-                ],
+                ),
               ),
-            ),
+              if (index == accountData.accounts.length - 1) ...[
+                Padding(
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: DottedBorder(
+                    color: AppColors.pinGrey,
+                    strokeWidth: 1,
+                    dashPattern: const [8, 4],
+                    borderType: BorderType.RRect,
+                    radius: const Radius.circular(12),
+                    child: Container(
+                      height: 115,
+                      width: 194,
+                      padding: const EdgeInsets.all(15),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(12),
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 32,
+                            width: 32,
+                            decoration: BoxDecoration(
+                                color: AppColors.pinGrey,
+                                borderRadius: BorderRadius.circular(16)),
+                            child: const Icon(Icons.add),
+                          ),
+                          const Text(
+                            'Add another currency to your account',
+                            style: AppTextStyles.medium14,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ]
+            ],
           );
         },
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:maplerad_assessment/shared/ui/app_colors.dart';
+import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({
@@ -32,9 +33,7 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const defaultTextStyle = TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
+    final defaultTextStyle = AppTextStyles.semiBold14.copyWith(
       color: Colors.white,
     );
     return ElevatedButton.icon(

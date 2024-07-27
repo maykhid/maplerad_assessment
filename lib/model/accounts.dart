@@ -58,7 +58,7 @@ class Accounts {
     },
     {
       "flag": "assets/images/ng.png",
-      "amount": "₦1000.00",
+      "amount": "₦15,000,000.00",
       "currency": "NGN",
     },
   ];
