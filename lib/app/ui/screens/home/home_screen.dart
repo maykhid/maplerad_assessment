@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:maplerad_assessment/app/ui/resource/ui.dart';
 import 'package:maplerad_assessment/app/ui/screens/home/widgets/get_started_options.dart';
 import 'package:maplerad_assessment/app/ui/screens/home/widgets/transaction_options.dart';
 import 'package:maplerad_assessment/app/ui/screens/home/widgets/user_account_information.dart';
