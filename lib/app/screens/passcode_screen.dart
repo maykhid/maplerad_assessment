@@ -50,6 +50,7 @@ class _PasscodeScreenState extends State<PasscodeScreen> {
               onDoneAction: (input) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
+                    duration: Durations.extralong4,
                     content: Text('Your passcode: $input'),
                   ),
                 );
