@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:maplerad_assessment/navigation/app_navigation_config.dart';
+import 'package:maplerad_assessment/navigation/navigation_service.dart';
+import 'package:maplerad_assessment/screens/passcode.dart';
 import 'package:maplerad_assessment/shared/ui/app_colors.dart';
+import 'package:maplerad_assessment/widgets/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,10 +14,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return MaterialApp.router(
+    final navigationService = NavigationService();
+    return MaterialApp(
       debugShowCheckedModeBanner: kDebugMode,
       theme: ThemeData(
+        bottomNavigationBarTheme:
+            const BottomNavigationBarThemeData(backgroundColor: Colors.white),
         appBarTheme: const AppBarTheme(
           backgroundColor: AppColors.background,
           surfaceTintColor: AppColors.background,
@@ -24,7 +28,12 @@ class MainApp extends StatelessWidget {
         fontFamily: 'NunitoSans',
         // textTheme: GoogleFonts.nunitoSansTextTheme(textTheme),
       ),
-      routerConfig: AppRouterConfig.goRouter,
+      navigatorKey: navigationService.navigationKey,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const PasscodeScreen(),
+        '/home': (context) => const BottomNavigation(),
+      },
     );
   }
 }

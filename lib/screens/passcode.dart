@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
+import 'package:maplerad_assessment/navigation/navigation_service.dart';
 import 'package:maplerad_assessment/shared/ui/app_colors.dart' show AppColors;
 import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
 import 'package:maplerad_assessment/widgets/maplerad_keypad.dart';
@@ -14,6 +14,8 @@ class PasscodeScreen extends StatefulWidget {
 }
 
 class _PasscodeScreenState extends State<PasscodeScreen> {
+  final navigationService = NavigationService();
+
   Map _keyMap = {};
 
   @override
@@ -50,7 +52,7 @@ class _PasscodeScreenState extends State<PasscodeScreen> {
                     content: Text('Your passcode: $input'),
                   ),
                 );
-                context.push('/home');
+                navigationService.popAndPushNamed('/home');
               },
             ),
 
