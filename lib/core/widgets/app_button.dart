@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:maplerad_assessment/app/ui/resource/ui.dart';
-import 'package:maplerad_assessment/core/utils/sized_context.dart';
 
 
 class AppButton extends StatelessWidget {

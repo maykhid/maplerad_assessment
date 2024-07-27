@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:maplerad_assessment/app/ui/resource/ui.dart' show AppColors, AppTextStyles;
 import 'package:maplerad_assessment/core/navigation/navigation_service.dart';
-import 'package:maplerad_assessment/app/ui/resource/app_colors.dart'
-    show AppColors;
-import 'package:maplerad_assessment/app/ui/resource/app_text_styles.dart';
+
 import 'package:maplerad_assessment/core/widgets/widgets.dart'
     show AppPasscodeField, AppKeypad;
 

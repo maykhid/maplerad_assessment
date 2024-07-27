@@ -12,6 +12,16 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static const TextStyle regular10 = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle extraBold10 = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w800,
+  );
+
   static const TextStyle regular14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,

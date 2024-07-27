@@ -1,8 +1,8 @@
 # maplerad_assessment
 
 # An Assessment.
-
-You can watch a Demo. https://drive.google.com/file/d/1FBkYoFzNCgnJaVQy1YNTEX4I2sWHqCZp/view?usp=sharing
+<!-- 
+You can watch a Demo. https://drive.google.com/file/d/1FBkYoFzNCgnJaVQy1YNTEX4I2sWHqCZp/view?usp=sharing -->
 
 You can download the apk below ⬇️
 

@@ -8,14 +8,12 @@ class HomeAppBar extends PreferredSize {
       : super(
             preferredSize: const Size.fromHeight(60.0),
             child: AppBar(
-              backgroundColor: AppColors.background,
               automaticallyImplyLeading: false,
               title: Image.asset(
                 AppImages.user,
                 width: 32,
                 height: 32,
               ),
-             
               actions: [
                 Container(
                   width: 102,

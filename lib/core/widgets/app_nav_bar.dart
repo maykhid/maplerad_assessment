@@ -25,11 +25,11 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
     });
   }
 
-  final List<String> _iconAssets = [
-    AppIcons.home,
-    AppIcons.wirePay,
-    AppIcons.creditCard,
-  ];
+  final Map<String, dynamic> _iconAssets = {
+    'Home': AppIcons.home,
+    'Wirebeam': AppIcons.wirePay,
+    'Cards': AppIcons.creditCard
+  };
 
   List<BottomNavigationBarItem> _buildBottomNavigationBarItems() {
     return List.generate(
@@ -37,9 +37,9 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
       (index) => BottomNavigationBarItem(
         icon: BottomItemIcon(
           color: currentTabIndex == index ? AppColors.blue : AppColors.grey,
-          assetName: _iconAssets[index],
+          assetName: _iconAssets.values.toList().elementAt(index),
         ),
-        label: '',
+        label: _iconAssets.keys.toList().elementAt(index),
       ),
     );
   }
@@ -49,8 +49,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
     return Scaffold(
       body: _pages[currentTabIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 0,
-        unselectedFontSize: 0,
+        selectedFontSize: 10,
         type: BottomNavigationBarType.fixed,
         onTap: (newTab) => _setCurrentTabTo(newTabIndex: newTab),
         currentIndex: currentTabIndex,
