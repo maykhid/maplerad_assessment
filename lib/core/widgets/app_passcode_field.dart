@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maplerad_assessment/app/resource/app_colors.dart';
+import 'package:maplerad_assessment/app/ui/resource/ui.dart'show AppColors;
 
 class AppPasscodeField extends StatelessWidget {
   const AppPasscodeField({

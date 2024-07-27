@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:maplerad_assessment/core/navigation/navigation_service.dart';
-import 'package:maplerad_assessment/app/screens/passcode_screen.dart';
-import 'package:maplerad_assessment/app/resource/app_colors.dart';
+import 'package:maplerad_assessment/app/ui/screens/passcode/passcode_screen.dart';
+import 'package:maplerad_assessment/app/ui/resource/app_colors.dart';
 import 'package:maplerad_assessment/core/widgets/widgets.dart' show AppBottomNavigation;
 
 

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:maplerad_assessment/app/resource/app_colors.dart';
-import 'package:maplerad_assessment/app/resource/app_icons.dart';
-import 'package:maplerad_assessment/app/resource/app_images.dart';
+import 'package:maplerad_assessment/app/ui/resource/ui.dart';
 
 class HomeAppBar extends PreferredSize {
   HomeAppBar({super.key})

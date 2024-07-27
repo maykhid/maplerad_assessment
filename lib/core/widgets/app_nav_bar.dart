@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:maplerad_assessment/app/screens/home_screen.dart';
-import 'package:maplerad_assessment/app/resource/ui.dart';
+import 'package:maplerad_assessment/app/ui/screens/home/home_screen.dart';
+import 'package:maplerad_assessment/app/ui/resource/ui.dart';
 
 class AppBottomNavigation extends StatefulWidget {
   const AppBottomNavigation({super.key});

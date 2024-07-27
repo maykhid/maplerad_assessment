@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:maplerad_assessment/app/resource/app_colors.dart';
-import 'package:maplerad_assessment/app/resource/app_icons.dart';
-import 'package:maplerad_assessment/app/resource/app_text_styles.dart';
+import 'package:maplerad_assessment/app/ui/resource/ui.dart';
+
 
 class AppKeypad extends StatefulWidget {
   /// [onCompleteAction] A callback function that is invoked when the input is complete
