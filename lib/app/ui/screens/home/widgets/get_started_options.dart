@@ -62,8 +62,8 @@ class GetStartedOptions extends StatelessWidget {
                   ),
                   const Spacer(),
                   AppButton(
-                    width: context.width * 0.37,
-                    height: 40,
+                    // width: context.width * 0.37,
+                    height: 32,
                     text: 'Verify Identity',
                     // padding: EdgeInsets.zero,
                     onPressed: () {},

@@ -18,7 +18,7 @@ class UserAccountInformation extends StatelessWidget {
         ),
         const Gap(15),
         SizedBox(
-          height: 126,
+          height: 130,
           child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
@@ -28,7 +28,8 @@ class UserAccountInformation extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: Container(
-                    width: context.width * 0.7,
+                    width: context.width * 0.73,
+                    // height: context.height * 0.2,
                     padding: const EdgeInsets.only(
                         top: 15, left: 15, right: 15, bottom: 12),
                     decoration: BoxDecoration(

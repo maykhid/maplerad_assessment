@@ -4,8 +4,8 @@ import 'package:maplerad_assessment/core/navigation/navigation_service.dart';
 import 'package:maplerad_assessment/app/ui/resource/app_colors.dart'
     show AppColors;
 import 'package:maplerad_assessment/app/ui/resource/app_text_styles.dart';
-import 'package:maplerad_assessment/core/widgets/widgets.dart' show AppPasscodeField, AppKeypad;
-
+import 'package:maplerad_assessment/core/widgets/widgets.dart'
+    show AppPasscodeField, AppKeypad;
 
 class PasscodeScreen extends StatefulWidget {
   const PasscodeScreen({super.key});
@@ -33,12 +33,12 @@ class _PasscodeScreenState extends State<PasscodeScreen> {
               'Pin should be 6 to 12 digits long',
               style: AppTextStyles.regular14.copyWith(color: AppColors.grey),
             ),
-            const Gap(200),
+            const Spacer(),
 
             // passcode field
             AppPasscodeField(keyMap: _keyMap),
 
-            const Spacer(),
+           const Spacer(),
 
             // custom keypad
             AppKeypad(
@@ -58,7 +58,7 @@ class _PasscodeScreenState extends State<PasscodeScreen> {
               },
             ),
 
-            const Gap(40),
+            const Gap(30),
           ],
         ),
       ),

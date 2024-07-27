@@ -12,13 +12,13 @@ class TransactionOptions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         AppButton(
-          width: context.width * 0.4,
+          width: context.width * 0.38,
           height: 40,
           text: 'Send Money',
           onPressed: () {},
         ),
         AppButton(
-          width: context.width * 0.4,
+          width: context.width * 0.38,
           height: 40,
           text: 'Add Money',
           buttonTextStyle: AppTextStyles.semiBold14.copyWith(
