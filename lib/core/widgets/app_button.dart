@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:maplerad_assessment/shared/ui/app_colors.dart';
-import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
+import 'package:maplerad_assessment/app/resource/app_colors.dart';
+import 'package:maplerad_assessment/app/resource/app_text_styles.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({

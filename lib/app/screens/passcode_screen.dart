@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:maplerad_assessment/navigation/navigation_service.dart';
-import 'package:maplerad_assessment/shared/ui/app_colors.dart' show AppColors;
-import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
-import 'package:maplerad_assessment/widgets/maplerad_keypad.dart';
-import 'package:maplerad_assessment/widgets/passcode_field.dart';
+import 'package:maplerad_assessment/core/navigation/navigation_service.dart';
+import 'package:maplerad_assessment/app/resource/app_colors.dart'
+    show AppColors;
+import 'package:maplerad_assessment/app/resource/app_text_styles.dart';
+import 'package:maplerad_assessment/core/widgets/widgets.dart' show AppPasscodeField, AppKeypad;
+
 
 class PasscodeScreen extends StatefulWidget {
   const PasscodeScreen({super.key});
@@ -14,7 +15,7 @@ class PasscodeScreen extends StatefulWidget {
 }
 
 class _PasscodeScreenState extends State<PasscodeScreen> {
-  final navigationService = NavigationService();
+  final navigationService = NavigationService.instance;
 
   Map _keyMap = {};
 
@@ -35,12 +36,12 @@ class _PasscodeScreenState extends State<PasscodeScreen> {
             const Gap(200),
 
             // passcode field
-            PasscodeField(keyMap: _keyMap),
+            AppPasscodeField(keyMap: _keyMap),
 
             const Spacer(),
 
             // custom keypad
-            MapleradKeypad(
+            AppKeypad(
               onChanged: (input, map) {
                 setState(() {
                   _keyMap = map;

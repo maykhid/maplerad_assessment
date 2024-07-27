@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:maplerad_assessment/shared/ui/app_colors.dart';
+import 'package:maplerad_assessment/app/resource/app_colors.dart';
 
-class PasscodeField extends StatelessWidget {
-  const PasscodeField({
+class AppPasscodeField extends StatelessWidget {
+  const AppPasscodeField({
     this.keyMap = const {},
     this.fieldLength = 6,
     super.key,

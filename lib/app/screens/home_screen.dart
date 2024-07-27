@@ -2,11 +2,12 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:maplerad_assessment/model/account_info.dart';
-import 'package:maplerad_assessment/model/accounts.dart';
-import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
-import 'package:maplerad_assessment/shared/ui/ui.dart';
-import 'package:maplerad_assessment/widgets/home_app_bar.dart';
+import 'package:maplerad_assessment/app/data/model/account_info.dart';
+import 'package:maplerad_assessment/app/data/model/accounts.dart';
+import 'package:maplerad_assessment/app/resource/ui.dart';
+import 'package:maplerad_assessment/core/utils/sized_context.dart';
+import 'package:maplerad_assessment/core/widgets/widgets.dart' show AppButton, HomeAppBar;
+
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class HomeScreen extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:maplerad_assessment/shared/ui/app_colors.dart';
-import 'package:maplerad_assessment/shared/ui/app_icons.dart';
-import 'package:maplerad_assessment/shared/ui/app_text_styles.dart';
+import 'package:maplerad_assessment/app/resource/app_colors.dart';
+import 'package:maplerad_assessment/app/resource/app_icons.dart';
+import 'package:maplerad_assessment/app/resource/app_text_styles.dart';
 
-class MapleradKeypad extends StatefulWidget {
+class AppKeypad extends StatefulWidget {
   /// [onCompleteAction] A callback function that is invoked when the input is complete
   /// (i.e., when the length of the input reaches inputLength)
   final void Function()? onCompleteAction;
@@ -20,7 +20,7 @@ class MapleradKeypad extends StatefulWidget {
   /// Make sure this always equals the field length
   final int inputLength;
 
-  const MapleradKeypad({
+  const AppKeypad({
     this.onCompleteAction,
     this.onDoneAction,
     this.inputLength = 6,
@@ -29,10 +29,10 @@ class MapleradKeypad extends StatefulWidget {
   });
 
   @override
-  State<MapleradKeypad> createState() => _MapleradKeypadState();
+  State<AppKeypad> createState() => _AppKeypadState();
 }
 
-class _MapleradKeypadState extends State<MapleradKeypad> {
+class _AppKeypadState extends State<AppKeypad> {
   void Function()? _onCompleteAction;
 
   void Function(String)? _onDoneAction;

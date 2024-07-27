@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:maplerad_assessment/screens/home.dart';
-import 'package:maplerad_assessment/shared/ui/ui.dart';
+import 'package:maplerad_assessment/app/screens/home_screen.dart';
+import 'package:maplerad_assessment/app/resource/ui.dart';
 
-class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({super.key});
+class AppBottomNavigation extends StatefulWidget {
+  const AppBottomNavigation({super.key});
 
   @override
-  State<BottomNavigation> createState() => _BottomNavigationState();
+  State<AppBottomNavigation> createState() => _AppBottomNavigationState();
 }
 
-class _BottomNavigationState extends State<BottomNavigation> {
+class _AppBottomNavigationState extends State<AppBottomNavigation> {
   int currentTabIndex = 0;
 
   final List<Widget> _pages = [
