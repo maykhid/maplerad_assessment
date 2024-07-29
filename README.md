@@ -8,7 +8,7 @@ You can download the apk below ⬇️
 
 <a href="https://drive.google.com/file/d/1h9aSg8CpbFbT1sZpSiUNsYG6cXxPLFv6/view?usp=sharing"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
 
-*❗️ Please make sure to read the Limitations / Issues section ❗️*
+*❗️ Please to read the Limitations / Issues section ❗️*
 
 
 ## ✨✨ Features
