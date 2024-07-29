@@ -8,7 +8,7 @@ You can download the apk below ⬇️
 
 <a href="https://drive.google.com/file/d/1h9aSg8CpbFbT1sZpSiUNsYG6cXxPLFv6/view?usp=sharing"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
 
-[Please make sure to read the Limitations / Issues section](# 🥲 Limitation / Issues)
+*❗️ Please make sure to read the Limitations / Issues section ❗️*
 
 
 ## ✨✨ Features
@@ -31,8 +31,8 @@ To run this project clone this repository. Launch your favourite Flutter IDE and
 Once you're done, you can then proceed to running the application. I personally use VScode but you can run this in IntelliJ or Android Studio.
 
 ## 🛠 How to use
-The app is pretty straight forward, you're greeted with the passcode screen. Inputing any passcode (any 6 digts) grants you access, you can then proceed to the home screen.
+The app is pretty straightforward, you're greeted with the passcode screen. Inputting any passcode (any 6 digits) grants you access, you can then proceed to the home screen.
 
-## 🥲 Limitation / Issues
-The avenir font used for the accounts to show amount does not render the currency sign (Naira & Ghana Cedis) on Android but it renders well on iOS and I thought changing the font entirely defeats the purpose of this assessment.
+## 🥲 Limitations / Issues
+The Avenir font used for the accounts to show the amount does not render the currency sign (Naira & Ghana Cedis) on Android. Still, it renders well on iOS and changing the font entirely defeats the purpose of this assessment.
 
